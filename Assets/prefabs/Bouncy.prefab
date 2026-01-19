@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2542270087943756802}
   - component: {fileID: 718480997867623943}
   - component: {fileID: 3726421132021722942}
+  - component: {fileID: 311146903215401514}
   m_Layer: 0
   m_Name: Bouncy
   m_TagString: Untagged
@@ -124,3 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Force: 500
+--- !u!114 &311146903215401514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537772110730507583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295a5f6eefc1c44fbfcce9f9b9c4189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6188191036665525039}
   - component: {fileID: 6495186600149663861}
   - component: {fileID: 1155210226871829937}
+  - component: {fileID: 1520642403708212769}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -31,7 +32,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1983873579582757327}
   m_Father: {fileID: 486286858872411784}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6188191036665525039
@@ -108,6 +110,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1520642403708212769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2560580986142015565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295a5f6eefc1c44fbfcce9f9b9c4189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6515944695404252695
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +275,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6504273318488898633}
-  - {fileID: 1983873579582757327}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7760709479370174156
@@ -290,13 +303,13 @@ Transform:
   m_GameObject: {fileID: 7760709479370174156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.009, y: 0.001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.017999649, y: 0.001999855, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2756827399234970391}
   - {fileID: 3974036876603122104}
-  m_Father: {fileID: 486286858872411784}
+  m_Father: {fileID: 6504273318488898633}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &87162197942848682
 MonoBehaviour:

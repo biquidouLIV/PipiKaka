@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 7114683285953150336}
   - component: {fileID: 8750773083959428317}
   - component: {fileID: 1889316247313974439}
+  - component: {fileID: 4219482328564849863}
   m_Layer: 0
   m_Name: ABSpike
   m_TagString: Untagged
@@ -312,3 +313,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicateur: {fileID: 3627499086557458547}
+--- !u!114 &4219482328564849863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453557705822195411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295a5f6eefc1c44fbfcce9f9b9c4189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

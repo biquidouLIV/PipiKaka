@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7977672476656793862}
   - component: {fileID: 2132623358963191708}
   - component: {fileID: 850774856161629839}
+  - component: {fileID: -1471465626038300564}
   m_Layer: 0
   m_Name: StickyBlock
   m_TagString: Untagged
@@ -119,5 +120,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b8b19414fc695c499e1d19903fde4b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1471465626038300564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8654052005515732266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b295a5f6eefc1c44fbfcce9f9b9c4189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
