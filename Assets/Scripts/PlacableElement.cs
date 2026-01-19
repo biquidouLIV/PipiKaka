@@ -17,17 +17,15 @@ public class PlacableElement : MonoBehaviour
             {
                 if(hit.transform.position == transform.position)
                 isSelected = !isSelected;
-                Debug.Log("is selected");
             }
-
         }
-
         if (isSelected)
         {
-            Debug.Log("2");
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                transform.Rotate(new Vector3(0,0,-90));
+            }
             transform.position = mousePosition;
         }
-        
     }
-    
 }
