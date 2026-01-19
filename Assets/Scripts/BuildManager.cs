@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BuildManager : MonoBehaviour
+public class BuildManager : MonoBehaviour // Pour l'instant pas utilisé
 {
     [SerializeField] public GameObject block;
     public void BasicBlock()
