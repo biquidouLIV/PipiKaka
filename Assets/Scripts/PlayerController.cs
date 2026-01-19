@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             float tempsAppui = (float)context.duration;
-            
+            rb.AddForce(new (rotationInput.x * 1000, rotationInput.y * 1000, 0f));
         }
     }
 
