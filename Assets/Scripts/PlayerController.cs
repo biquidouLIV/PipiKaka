@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context)
     {
         rotationInput = context.ReadValue<Vector2>();
-        Debug.Log(rotationInput);
     }
         
     public void OnJump(InputAction.CallbackContext context)
@@ -41,11 +40,18 @@ public class PlayerController : MonoBehaviour
         if (rotationInput.x != 0)
         {
             float angle = Mathf.Atan(rotationInput.y / rotationInput.x);
+
+            Vector3 rot = new(0f, 0f, 0f);
+
             if (rotationInput.x > 0)
-                angle += Mathf.PI;
-            Vector3 rot = new (0f, 0f, (angle+ Mathf.PI/2) * 180 / Mathf.PI);
+            {
+                rot = new (0f, 0f, (angle + 3 * Mathf.PI/2) * 180 / Mathf.PI);
+            }
+            else
+            {
+                rot = new (0f, 0f, (angle + Mathf.PI/2) * 180 / Mathf.PI);
+            }
         
-            Debug.Log(rot);
             arrowParent.transform.rotation = Quaternion.Euler(rot);
         }
     }
