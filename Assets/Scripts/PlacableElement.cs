@@ -8,10 +8,16 @@ public class PlacableElement : MonoBehaviour
     private bool isSelected;
     private void Update()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z+10));
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z+9));
 
         if (Input.GetMouseButtonDown(0))
         {
+            if (isSelected)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+            }
+            
+            
             Ray ray = Camera.main.ScreenPointToRay(new Vector3(Input.mousePosition.x,Input.mousePosition.y,Input.mousePosition.z+10));
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
