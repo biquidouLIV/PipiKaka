@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject arrowParent;
     private Vector2 moveInput;
     private Vector2 rotationInput = new Vector2(0,1);
+    private Vector2 rotation = new Vector2(0,1);
     private Rigidbody rb;
     
     [SerializeField] private float forceMin = 5f;
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
             {
                 tempsAppui = Mathf.Clamp(tempsAppui, 0f, tempsMax);
                 float multiplicateur = tempsAppui / tempsMax;
-                rb.AddForce(new (rotationInput.x * 500 * multiplicateur, rotationInput.y * 500 * multiplicateur, 0f));
+                rb.AddForce(new (rotation.x * 500 * multiplicateur, rotation.y * 500 * multiplicateur, 0f));
             }
             appuiEnCours = false;
             tempsAppui = 0f;
@@ -57,25 +58,29 @@ public class PlayerController : MonoBehaviour
     public void OnLook(InputAction.CallbackContext context)
     {
         rotationInput = context.ReadValue<Vector2>();
+        if (rotationInput.x + rotationInput.y > 0.1 || rotationInput.x + rotationInput.y < -0.1)
+        {
+            rotation = rotationInput.normalized;
+        }
     }
 
     private void FixedUpdate()
     {
         Vector3 dir = new (moveInput.x, 0f, 0f);
         rb.MovePosition(rb.position + speed * Time.deltaTime * dir);
-        if (rotationInput.x != 0)
+        if (rotation.x != 0)
         {
-            float angle = Mathf.Atan(rotationInput.y / rotationInput.x);
+            float angle = Mathf.Atan(rotation.y / rotation.x);
 
             Vector3 rot = new(0f, 0f, 0f);
             
-            if (rotationInput.x > 0)
+            if (rotation.x > 0)
             {
-                rot = new (0f, 0f, (angle + 3 * Mathf.PI/2) * 180 / Mathf.PI);
+                rot = new (0f, 0f, angle * 180 / Mathf.PI + 270);
             }
             else
             {
-                rot = new (0f, 0f, (angle + Mathf.PI/2) * 180 / Mathf.PI);
+                rot = new (0f, 0f, angle * 180 / Mathf.PI + 90);
             }
         
             arrowParent.transform.rotation = Quaternion.Euler(rot);
