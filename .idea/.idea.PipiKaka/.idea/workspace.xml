@@ -7,7 +7,18 @@
     <list default="true" id="a800c6f9-d3b0-46f5-99c9-d948ad7223b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PipiKaka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PipiKaka/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlacableElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlacableElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomBlock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RandomBlock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/ABRythme.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/ABRythme.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/ABSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/ABSpike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Bouncy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Bouncy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/IceBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/IceBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/MasseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/MasseBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Ressort.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Ressort.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Spike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Spike.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/StickyBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/StickyBlock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Ventilateur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Ventilateur.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +41,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BlockCollision.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomBlock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@6279e2b7c485/Runtime/VisualScripting.Flow/Framework/Events/Input/OnMouseDown.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -114,7 +126,7 @@
       <option name="presentableId" value="Default" />
       <updated>1768829020234</updated>
       <workItem from="1768829020907" duration="11690000" />
-      <workItem from="1768903626535" duration="1672000" />
+      <workItem from="1768903626535" duration="14681000" />
     </task>
     <servers />
   </component>

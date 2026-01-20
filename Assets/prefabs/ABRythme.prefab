@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: -6620740925040493900}
   m_Layer: 0
   m_Name: ABRythme
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
