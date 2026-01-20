@@ -7,6 +7,7 @@
     <list default="true" id="a800c6f9-d3b0-46f5-99c9-d948ad7223b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PipiKaka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PipiKaka/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestPlayer.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestPlayer.unity" afterDir="false" />
@@ -14,6 +15,10 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Exit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Exit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
 >>>>>>> origin/Romain
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+>>>>>>> origin/moi
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +57,11 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "Romain",
+=======
+    "git-widget-placeholder": "moi",
+>>>>>>> origin/moi
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -123,10 +132,14 @@
       <updated>1768829020234</updated>
       <workItem from="1768829020907" duration="11690000" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <workItem from="1768903626535" duration="17109000" />
 =======
       <workItem from="1768908461850" duration="2356000" />
 >>>>>>> origin/Romain
+=======
+      <workItem from="1768906061395" duration="2902000" />
+>>>>>>> origin/moi
     </task>
     <servers />
   </component>
