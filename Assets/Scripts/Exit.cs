@@ -1,10 +1,14 @@
-using System;
 using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            GameManager.Instance.CurrentState = GameManager.GameState.GameOver;
+        }
+        
     }
+    
 }
