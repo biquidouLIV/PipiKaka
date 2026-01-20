@@ -1,41 +1,60 @@
-using System;
-using Unity.VisualScripting;
+// Game Manager Script
+
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    ProgramState state = ProgramState.Setup;
     
-    public enum ProgramState
+    // GameState
+    [SerializeField] private GameObject cameraLobby;
+    [SerializeField] private GameObject MainCamera;
+    
+    
+    public enum GameState
     {
         Setup,
         Build,
         Play,
         GameOver
     }
-
-    public void Update()
+    
+    private GameState _currentState = GameState.Setup;
+    
+    public GameState currentState
     {
-        switch (state)
+        get => _currentState;
+        set
         {
-            case ProgramState.Setup:
-                Debug.Log("Phase de Setup");
-                break;
-            case ProgramState.Build:
-                Debug.Log("Phase de Build");
-                break;
-            case ProgramState.Play:
-                Debug.Log("Phase de Play");
-                break;
-            case ProgramState.GameOver:
-                Debug.Log("Phase de GameOver");
-                break;
-        }
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            state = ProgramState.Build;
+            _currentState = value;
+            switch (_currentState)
+            {
+                case GameState.Setup:
+                    cameraLobby.SetActive(!cameraLobby.activeSelf);
+                    Debug.Log("Phase de Setup");
+                    break;
+                case GameState.Build:
+                    cameraLobby.SetActive(false);
+                    MainCamera.SetActive(true);
+                    Debug.Log("Phase de Build");
+                    break;
+                case GameState.Play:
+                    Debug.Log("Phase de Play");
+                    break;
+                case GameState.GameOver:
+                    Debug.Log("Phase de GameOver");
+                    break;
+                default:
+                    Debug.Log("caca");
+                    break;
+            }
         }
     }
-    
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            currentState = GameState.Build;
+        }
+    }
 }
