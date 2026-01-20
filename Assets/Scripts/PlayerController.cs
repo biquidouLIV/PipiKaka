@@ -1,16 +1,20 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private GameObject arrowParent;
+    [SerializeField] private GameObject explosion;
+    [SerializeField] private Explosion explosionScript;
     private Vector2 moveInput;
     private Vector2 rotationInput = new Vector2(0,1);
     private Vector2 rotation = new Vector2(0,1);
     private Rigidbody rb;
-    
+    private float maxExplScale = 3.0f;
+    [Header("Player")]
     [SerializeField] private float forceMin = 5f;
     [SerializeField] private float forceMax = 12f;
     [SerializeField] private float tempsMax = 1f;
@@ -39,6 +43,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (ctx.canceled)
         {
+            explosionScript.Explode();
             if (appuiEnCours)
             {
                 tempsAppui = Mathf.Clamp(tempsAppui, 0f, tempsMax);
@@ -72,6 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             float angle = Mathf.Atan(rotation.y / rotation.x);
 
+            Vector3 rotExpl = new(0f, 0f, 180f);
             Vector3 rot = new(0f, 0f, 0f);
             
             if (rotation.x > 0)
@@ -82,7 +88,18 @@ public class PlayerController : MonoBehaviour
             {
                 rot = new (0f, 0f, angle * 180 / Mathf.PI + 90);
             }
-        
+            if (tempsAppui >= 0.2)
+            {
+                float calculatedScale = MathF.Round(tempsAppui * 10) / 10;
+                float finalScale = Mathf.Clamp(calculatedScale, 0f, maxExplScale);
+                Vector3 explScale = new Vector3(finalScale, finalScale, finalScale);
+                explosion.transform.localScale = explScale;
+
+            }
+            else
+            {
+                explosion.transform.localScale = new Vector3(1, 1, 1);
+            }
             arrowParent.transform.rotation = Quaternion.Euler(rot);
         }
     }
