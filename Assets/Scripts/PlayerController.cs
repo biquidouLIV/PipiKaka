@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tempsMax = 1f;
     [SerializeField] private bool appuiEnCours = false;
     [SerializeField] private float tempsAppui = 0f;
-    [SerializeField] private bool auSol = false;
     
     void Start()
     {
@@ -32,10 +31,9 @@ public class PlayerController : MonoBehaviour
     
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (auSol && ctx.started)
+        if (Physics.Raycast(transform.position, Vector3.down, 1f) && ctx.started)
         {
             appuiEnCours = true;
-            auSol = false;
             tempsAppui = 0f;
         }
         else if (ctx.canceled)
@@ -81,14 +79,6 @@ public class PlayerController : MonoBehaviour
             }
         
             arrowParent.transform.rotation = Quaternion.Euler(rot);
-        }
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Platform"))
-        {
-            auSol = true;
         }
     }
 }
