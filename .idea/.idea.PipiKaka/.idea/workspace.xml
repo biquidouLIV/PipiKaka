@@ -6,19 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a800c6f9-d3b0-46f5-99c9-d948ad7223b9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PipiKaka/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PipiKaka/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlacableElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlacableElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/ABRythme.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/ABRythme.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/ABSpike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/ABSpike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Bouncy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Bouncy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/IceBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/IceBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/MasseBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/MasseBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Ressort.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Ressort.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Spike.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Spike.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/StickyBlock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/StickyBlock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Ventilateur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Ventilateur.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,19 +40,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Liam&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Liam",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.0.60f1\Editor\Unity.exe" />
@@ -126,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1768829020234</updated>
       <workItem from="1768829020907" duration="11690000" />
-      <workItem from="1768903626535" duration="14681000" />
+      <workItem from="1768903626535" duration="17109000" />
     </task>
     <servers />
   </component>
