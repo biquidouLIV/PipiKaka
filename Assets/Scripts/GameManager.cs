@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [Header("UI")] 
     [SerializeField] private Image[] playerScoreUI;
 
+    [SerializeField] private GameObject scoreUI;
+
     
     [SerializeField] private GameObject[] Platforms;
     
@@ -30,7 +32,6 @@ public class GameManager : MonoBehaviour
     private Dictionary<GameObject, int> score = new ();
     private GameObject winner;
     [SerializeField] private int winScore = 10;
-    [SerializeField] private GameObject bloc;
     [Header("Settings Multijoueur")]
     [SerializeField] private Color[] playerColors;
     
@@ -48,6 +49,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         CurrentState = GameState.Setup;
+        scoreUI.SetActive(false);
     }
     public enum GameState
     {
@@ -77,7 +79,6 @@ public class GameManager : MonoBehaviour
                     BuildPlayer = 0;
                     break;
                 case GameState.Build:
-                    bloc.SetActive(false);
                     
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                     foreach (GameObject player in players)
@@ -245,13 +246,19 @@ public class GameManager : MonoBehaviour
             playerScoreUI[i].fillAmount = (float)score[player]/winScore;
             player.transform.position = new Vector3(-15f, 8 - 3.6f * i, 0);
             player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
-            bloc.SetActive(true);
             i++;
         }
-        
+
+        while (i < 4)
+        {
+            playerScoreUI[i].fillAmount = 0f;
+            i++;
+        }
+        scoreUI.SetActive(true);
         
         yield return new WaitForSeconds(3f);
         
+        scoreUI.SetActive(false);
         foreach (var player in scoreboard)
         {
             player.transform.position = new Vector3(-50,-1.28f,0);

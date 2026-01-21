@@ -24,9 +24,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tempsAppui = 0f;
     public LayerMask layersToHit;
     private bool grounded = true;
-    //[SerializeField] private Animator player_animator;
+    [SerializeField] private Animator player_animator;
     [Header("Apparence")]
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     
     void Start()
     {
@@ -91,11 +91,11 @@ public class PlayerController : MonoBehaviour
         }
         if (dir == new Vector3(0f, 0f, 0f))
         {
-            //player_animator.SetBool("isWalking", false);
+            player_animator.SetBool("isWalking", false);
         }
         else
         {
-            //player_animator.SetBool("isWalking", true);
+            player_animator.SetBool("isWalking", true);
         }
 
         if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit))
@@ -146,9 +146,9 @@ public class PlayerController : MonoBehaviour
     }
     public void SetColor(Color newColor)
     {
-        if (meshRenderer != null)
+        if (spriteRenderer != null)
         {
-            meshRenderer.material.color = newColor;
+            spriteRenderer.color = newColor;
         }
     }
 }
