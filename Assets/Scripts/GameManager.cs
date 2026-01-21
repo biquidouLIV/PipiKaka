@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     
     // GameState
+    [SerializeField] private GameObject[] Platforms;
+    
     [SerializeField] private GameObject cameraLobby;
     [SerializeField] private GameObject mainCamera;
     public GameObject gameOverMenu;
@@ -48,7 +50,10 @@ public class GameManager : MonoBehaviour
                     //Debug.Log("Phase de Setup");
                     break;
                 case GameState.Build:
-                    //Debug.Log("Phase de Build");
+                    TpPlayer();
+                    cameraLobby.SetActive(false);
+                    mainCamera.SetActive(true);
+                    SpawnRandomBlock();
                     break;
                 case GameState.Play:
                     TpPlayer();
@@ -61,7 +66,7 @@ public class GameManager : MonoBehaviour
                     //Debug.Log("Phase de GameOver");
                     break;
                 default:
-                    Debug.Log("caca");
+                    Debug.Log("kaka");
                     break;
             }
         }
@@ -75,7 +80,7 @@ public class GameManager : MonoBehaviour
             nbPlayerAlive++;
             if (_currentState == GameState.Play)
             {
-                player.gameObject.transform.position = new Vector3(-9, 4 + i, 0);
+                player.gameObject.transform.position = new Vector3(-16, 4 + i, 0);
                 i++;
             }
         }
@@ -95,7 +100,20 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(2))
         {
-            CurrentState = GameState.Play;
+            CurrentState = GameState.Build;
         }
+    }
+
+    private void SpawnRandomBlock()
+    {
+        for (int j =0; j < nbPlayerAlive; j++)
+        {
+            Debug.Log(j);
+            for (int i = 0; i < 5; i++)
+            {
+                Instantiate(Platforms[UnityEngine.Random.Range(0, Platforms.Length-1)], new Vector3(-8+4*i,-3,-1), Quaternion.identity);
+            }
+        }
+
     }
 }

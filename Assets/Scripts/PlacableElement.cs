@@ -41,6 +41,7 @@ public class PlacableElement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Action();
+            Debug.Log("clic gauce");
         }
     }
 
