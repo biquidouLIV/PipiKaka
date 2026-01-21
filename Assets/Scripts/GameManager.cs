@@ -226,6 +226,11 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator AfficherScore()
     {
+        foreach (var player in scoreboard)
+        {
+            Debug.Log(score[player]);
+        }
+        
         
         yield return new WaitForSeconds(3f);
         
