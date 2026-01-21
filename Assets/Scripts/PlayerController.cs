@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tempsAppui = 0f;
     public LayerMask layersToHit;
     private bool grounded = true;
-    [SerializeField] private Animator player_animator;
+    //[SerializeField] private Animator player_animator;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -88,11 +88,11 @@ public class PlayerController : MonoBehaviour
         }
         if (dir == new Vector3(0f, 0f, 0f))
         {
-            player_animator.SetBool("isWalking", false);
+            //player_animator.SetBool("isWalking", false);
         }
         else
         {
-            player_animator.SetBool("isWalking", true);
+            //player_animator.SetBool("isWalking", true);
         }
 
         if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit))

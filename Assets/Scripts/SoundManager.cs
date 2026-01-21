@@ -42,7 +42,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        mainMusic.Play();
+        //mainMusic.Play();
     }
 
     //
