@@ -195,6 +195,9 @@ MonoBehaviour:
   tempsMax: 1
   appuiEnCours: 0
   tempsAppui: 0
+  layersToHit:
+    serializedVersion: 2
+    m_Bits: 63
 --- !u!114 &539912019900306719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -458,7 +461,7 @@ GameObject:
   - component: {fileID: 8549634229177330064}
   - component: {fileID: 3374935827654047868}
   - component: {fileID: 86963367870578792}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.Controls;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("stats")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private GameObject arrowParent;
     [SerializeField] private GameObject explosion;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tempsMax = 1f;
     [SerializeField] private bool appuiEnCours = false;
     [SerializeField] private float tempsAppui = 0f;
+    public LayerMask layersToHit;
     
     void Start()
     {
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
     
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (Physics.Raycast(transform.position, Vector3.down, 1f) && ctx.started)
+        if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit) && ctx.started)
         {
             appuiEnCours = true;
             tempsAppui = 0f;
@@ -91,6 +93,10 @@ public class PlayerController : MonoBehaviour
             }
             if (tempsAppui >= 0.2)
             {
+                explosionScript.strength += 0.12f; //pour pas que la force soit trop grande
+                explosionScript.strength = Mathf.Clamp(explosionScript.strength, 0f, 15f);
+                Debug.Log(explosionScript.strength);
+                
                 float calculatedScale = MathF.Round(tempsAppui * 10) / 10;
                 float finalScale = Mathf.Clamp(calculatedScale, 0f, maxExplScale);
                 Vector3 explScale = new Vector3(finalScale, finalScale, finalScale);
@@ -100,6 +106,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 explosion.transform.localScale = new Vector3(1, 1, 1);
+                explosionScript.strength = 0f;
             }
             arrowParent.transform.rotation = Quaternion.Euler(rot);
         }
