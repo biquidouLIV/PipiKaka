@@ -45,11 +45,13 @@ public class PlayerController : MonoBehaviour
     {
         if (grounded == true && ctx.started)
         {
+            player_animator.SetTrigger("Load");
             appuiEnCours = true;
             tempsAppui = 0f;
         }
         else if (ctx.canceled)
         {
+            player_animator.SetTrigger("Jump");
             explosionScript.Explode();
             if (appuiEnCours)
             {

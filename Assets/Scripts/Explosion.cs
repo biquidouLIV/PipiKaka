@@ -6,7 +6,8 @@ public class Explosion : MonoBehaviour
 {
     [SerializeField] public float strength =0f;
     List<GameObject> playerList = new List<GameObject>();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private Animator explosion_animator;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -29,10 +30,7 @@ public class Explosion : MonoBehaviour
             Vector3 direction = (PLAYER.transform.position - transform.position).normalized;
             PLAYER.GetComponent<Rigidbody>().AddForce(direction * strength, ForceMode.Impulse);
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
         
+        explosion_animator.SetTrigger("Explode");
     }
 }
