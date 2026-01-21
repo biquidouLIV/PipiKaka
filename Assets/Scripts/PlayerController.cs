@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     public LayerMask layersToHit;
     private bool grounded = true;
     //[SerializeField] private Animator player_animator;
+    [Header("Apparence")]
+    [SerializeField] private MeshRenderer meshRenderer;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -139,6 +142,13 @@ public class PlayerController : MonoBehaviour
                 explosionScript.strength = 0f;
             }
             arrowParent.transform.rotation = Quaternion.Euler(rot);
+        }
+    }
+    public void SetColor(Color newColor)
+    {
+        if (meshRenderer != null)
+        {
+            meshRenderer.material.color = newColor;
         }
     }
 }

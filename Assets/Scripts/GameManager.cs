@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -30,6 +31,9 @@ public class GameManager : MonoBehaviour
     private GameObject winner;
     [SerializeField] private int winScore = 10;
     [SerializeField] private GameObject bloc;
+    [Header("Settings Multijoueur")]
+    [SerializeField] private Color[] playerColors;
+    
 
     public static GameManager Instance;
 
@@ -262,5 +266,14 @@ public class GameManager : MonoBehaviour
         {
             CurrentState = GameState.Build;
         }
+    }
+    public void OnPlayerJoined(PlayerInput input)
+    {
+        int index = input.playerIndex;
+
+        Color assignedColor = playerColors[index % playerColors.Length];
+        
+        input.gameObject.GetComponent<PlayerController>().SetColor(assignedColor); //modifie le script du prefab playercontroller comme ca ca change la couleur t'as capté
+        
     }
 }
