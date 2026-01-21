@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     private Dictionary<GameObject, int> score = new ();
     private GameObject winner;
     [SerializeField] private int winScore = 10;
+    [SerializeField] private GameObject bloc;
 
     public static GameManager Instance;
 
@@ -72,6 +73,7 @@ public class GameManager : MonoBehaviour
                     BuildPlayer = 0;
                     break;
                 case GameState.Build:
+                    bloc.SetActive(false);
                     
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                     foreach (GameObject player in players)
@@ -101,9 +103,10 @@ public class GameManager : MonoBehaviour
                     break;
                 
                 case GameState.Play:
+                    
                     BuildPlayer = 0;
-                    //Debug.Log("phase Play");
                     TpPlayer();
+                    
                     deadPlayers.Clear();
                     scoreboard.Clear();
                     break;
@@ -236,12 +239,20 @@ public class GameManager : MonoBehaviour
         foreach (var player in scoreboard)
         {
             playerScoreUI[i].fillAmount = (float)score[player]/winScore;
+            player.transform.position = new Vector3(-15f, 8 - 3.6f * i, 0);
+            player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
+            bloc.SetActive(true);
             i++;
         }
         
         
-        
         yield return new WaitForSeconds(3f);
+        
+        foreach (var player in scoreboard)
+        {
+            player.transform.position = new Vector3(-50,-1.28f,0);
+            player.GetComponent<Rigidbody>().constraints &= ~(RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY);
+        }
         
         if (winner != null)
         {
