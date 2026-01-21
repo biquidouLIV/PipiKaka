@@ -91,6 +91,10 @@ public class PlayerController : MonoBehaviour
             }
             if (tempsAppui >= 0.2)
             {
+                explosionScript.strength += 0.12f; //pour pas que la force soit trop grande
+                explosionScript.strength = Mathf.Clamp(explosionScript.strength, 0f, 15f);
+                Debug.Log(explosionScript.strength);
+                
                 float calculatedScale = MathF.Round(tempsAppui * 10) / 10;
                 float finalScale = Mathf.Clamp(calculatedScale, 0f, maxExplScale);
                 Vector3 explScale = new Vector3(finalScale, finalScale, finalScale);
@@ -100,6 +104,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 explosion.transform.localScale = new Vector3(1, 1, 1);
+                explosionScript.strength = 0f;
             }
             arrowParent.transform.rotation = Quaternion.Euler(rot);
         }

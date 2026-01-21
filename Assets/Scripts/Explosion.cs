@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 public class Explosion : MonoBehaviour
 {
-    [SerializeField] private float strength =100f;
+    [SerializeField] public float strength =0f;
     List<GameObject> playerList = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void OnTriggerEnter(Collider other)
