@@ -90,7 +90,7 @@ public class WorldGenerator : MonoBehaviour
             posList.Add((xCoord, yCoord));
             
             Vector3 pos = new Vector3(xCoord, yCoord, 0);
-            Quaternion rot = Quaternion.Euler(new Vector3(0, 0, 90 * Random.Range(0,4)));
+            Quaternion rot = Quaternion.Euler(new Vector3(0, 0, 0));
             
             Instantiate(elem, pos, rot);
         }

@@ -99,7 +99,6 @@ GameObject:
   - component: {fileID: 6188191036665525039}
   - component: {fileID: 6495186600149663861}
   - component: {fileID: 1155210226871829937}
-  - component: {fileID: 1520642403708212769}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -198,19 +197,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1520642403708212769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2560580986142015565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b295a5f6eefc1c44fbfcce9f9b9c4189, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlaced: 0
 --- !u!1 &4520407912837124236
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,7 +417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486286858872411784}
   m_Layer: 0
-  m_Name: MasseBlock
+  m_Name: MasseBlock 1
   m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
