@@ -198,6 +198,7 @@ MonoBehaviour:
   layersToHit:
     serializedVersion: 2
     m_Bits: 63
+  meshRenderer: {fileID: 5482366669978946449}
 --- !u!114 &539912019900306719
 MonoBehaviour:
   m_ObjectHideFlags: 0
