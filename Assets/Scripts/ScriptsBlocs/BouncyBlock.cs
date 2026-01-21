@@ -2,13 +2,14 @@ using UnityEngine;
 
 public class BouncyBlock : MonoBehaviour
 {
-    [SerializeField] float Force = 10f;
-
-    private void OnCollisionEnter(Collision other) // c'est le bumper de mickael
+    [SerializeField] float strength = 1;
+    
+    private void OnCollisionEnter(Collision other)
     {
-        Vector3 a = transform.position;
-        Vector3 b = other.transform.position;
-        Vector3 direction = (b - a).normalized;
-        other.rigidbody.AddForce(direction * Force);
+        Vector3 ballDirection = other.relativeVelocity;
+        Vector3 normal = -other.contacts[0].normal;
+        Vector3 direction = Vector3.Reflect(ballDirection, normal);
+        
+        other.rigidbody.AddForce(direction * strength);
     }
 }

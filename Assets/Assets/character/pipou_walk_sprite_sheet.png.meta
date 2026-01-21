@@ -1,0 +1,1107 @@
+fileFormatVersion: 2
+guid: c66ed051765fa2c4d9672fb4767abc59
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 656
+        width: 86
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89136b8b9d43c02418f61308ae64fdce
+      internalID: -2060914666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 656
+        width: 86
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3255087a8f90e445b5a22bdfa8d2706
+      internalID: 1910663643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 656
+        width: 89
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed693c73255ee44d92348343836a44b
+      internalID: -1361741647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 653
+        width: 72
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc81f64709149064b91ed70e48f08e58
+      internalID: -1652148488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 641
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe89dc9fe3e3cfd419d9ab6547705fb8
+      internalID: 1494339260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 637
+        width: 93
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2fa2596d4d7404a9dcd66468c42fba
+      internalID: -217999074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 640
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fe4859a98b4e77449419a6a1170d496
+      internalID: -663341660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 528
+        width: 92
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122e8267741bc88439db9bede9a3c447
+      internalID: 1117029411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 528
+        width: 86
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 6}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e63c05110c235d44a6e11116b4029c3
+      internalID: 1503035181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 528
+        width: 86
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec5b75eaf0098d24e90a88ead74dd75d
+      internalID: 1106054658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 514
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898f5caa1cdb51542800a64b8e327607
+      internalID: 665651859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 513
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51168b19a7d782246a6cd514de909b08
+      internalID: -1049903016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 512
+        width: 94
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0c93608c3baf249a4d041ba29e9e89
+      internalID: 1280415981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 513
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a8a139575a7f046b48401df191cf44
+      internalID: -1500174694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 400
+        width: 92
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dcbcc85c918ba242b36dd0e0dbcbe79
+      internalID: -1556344997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 400
+        width: 88
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2bb9d1fa7f25d4bbeb0c3be54632c7
+      internalID: -2038578463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 400
+        width: 77
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb0976526d9b05428ef2a2a35a5d384
+      internalID: -2076280571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 386
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c4f51f44fa28f4199e2dfd970a4535
+      internalID: -1080947754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 385
+        width: 72
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74515e052dae37c4091f9f10d3c45ae3
+      internalID: 841470556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 384
+        width: 93
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22878b0f46bb5f642b1252ac9b30925b
+      internalID: 54843357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 385
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd35c52a539dcb04f986e529a4ad932a
+      internalID: 314074835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 258
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1426cf7122e6e7499fd5e2406db498f
+      internalID: -1842328553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 257
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6e35ba8f9165f49b93b8f0451f5d9a
+      internalID: -15905773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 257
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0837ce27fab36ba4785b50c23a3d81dd
+      internalID: 479465911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 257
+        width: 71
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1f4f40acdbe53c469b12f0e76ce7acb
+      internalID: 1107644780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 257
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1032bcc2f13323b4490b5547cf97a4d8
+      internalID: 1009032986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 256
+        width: 88
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3b650bf1c1c7e4986aee6fca4edcb2
+      internalID: -330922923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 258
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5be3349af18034ca4b2b20273c8e72
+      internalID: -587485072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 129
+        width: 78
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1b16c9311f6cc4db83c98f7ad9397e
+      internalID: 1706531840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 128
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7474f108dbf71b24bb959049fb1be469
+      internalID: 1698269678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 128
+        width: 90
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b238838460629fb46a5acf63910f7f1c
+      internalID: -2047499890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 128
+        width: 91
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757c3edfc6cb6d140b7cdb4cf697dfee
+      internalID: -768185344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 128
+        width: 92
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b3fcaca6a1f0a479285fb66f326e3e
+      internalID: 1096105027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 127
+        width: 77
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48251f5a49aaa743b53bb739aa40b3d
+      internalID: 1344466381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 133
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4cae87e7026399468e4dbc72ad2b70c
+      internalID: -1180000268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eb6815528e98644b821ab3d7d303273
+      internalID: 1547173280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 0
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bddda2c1eeb00d24585b8f47dfceec52
+      internalID: 721239205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fc13606cda7bc45bc94ac61d619227
+      internalID: 1996236215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd634b39eec966d4aab6d75b14bb0337
+      internalID: 1498914444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 0
+        width: 73
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4e9d19fc6db1fb4bb57067dc8144b9a
+      internalID: -933756071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 0
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d4ef30cf423ee47adf29fd8bc967d7
+      internalID: -2058383858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipou_walk_sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 8
+        width: 73
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46409577f027b9541bfa2fe53c0b0fdc
+      internalID: 1698399061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6d4d5864cb2ef1b4082bae27ef02e561
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pipou_walk_sprite_sheet_0: -2060914666
+      pipou_walk_sprite_sheet_1: 1910663643
+      pipou_walk_sprite_sheet_10: 1106054658
+      pipou_walk_sprite_sheet_11: 665651859
+      pipou_walk_sprite_sheet_12: -1049903016
+      pipou_walk_sprite_sheet_13: 1280415981
+      pipou_walk_sprite_sheet_14: -1500174694
+      pipou_walk_sprite_sheet_15: -451352435
+      pipou_walk_sprite_sheet_16: -1556344997
+      pipou_walk_sprite_sheet_17: -2038578463
+      pipou_walk_sprite_sheet_18: -2076280571
+      pipou_walk_sprite_sheet_19: -1080947754
+      pipou_walk_sprite_sheet_2: -1361741647
+      pipou_walk_sprite_sheet_20: 841470556
+      pipou_walk_sprite_sheet_21: 54843357
+      pipou_walk_sprite_sheet_22: 314074835
+      pipou_walk_sprite_sheet_23: 1949336103
+      pipou_walk_sprite_sheet_24: -1842328553
+      pipou_walk_sprite_sheet_25: -15905773
+      pipou_walk_sprite_sheet_26: 479465911
+      pipou_walk_sprite_sheet_27: 1107644780
+      pipou_walk_sprite_sheet_28: 1009032986
+      pipou_walk_sprite_sheet_29: -330922923
+      pipou_walk_sprite_sheet_3: -1652148488
+      pipou_walk_sprite_sheet_30: -587485072
+      pipou_walk_sprite_sheet_31: 1834276321
+      pipou_walk_sprite_sheet_32: 1706531840
+      pipou_walk_sprite_sheet_33: 1698269678
+      pipou_walk_sprite_sheet_34: -2047499890
+      pipou_walk_sprite_sheet_35: -768185344
+      pipou_walk_sprite_sheet_36: 1096105027
+      pipou_walk_sprite_sheet_37: 1344466381
+      pipou_walk_sprite_sheet_38: -1180000268
+      pipou_walk_sprite_sheet_39: 376847855
+      pipou_walk_sprite_sheet_4: 1494339260
+      pipou_walk_sprite_sheet_40: -623969899
+      pipou_walk_sprite_sheet_41: 1909748421
+      pipou_walk_sprite_sheet_42: -218895241
+      pipou_walk_sprite_sheet_43: -1936140477
+      pipou_walk_sprite_sheet_44: 178831976
+      pipou_walk_sprite_sheet_45: 1547173280
+      pipou_walk_sprite_sheet_46: 721239205
+      pipou_walk_sprite_sheet_47: 1996236215
+      pipou_walk_sprite_sheet_48: 1498914444
+      pipou_walk_sprite_sheet_49: -933756071
+      pipou_walk_sprite_sheet_5: -217999074
+      pipou_walk_sprite_sheet_50: -2058383858
+      pipou_walk_sprite_sheet_51: 1698399061
+      pipou_walk_sprite_sheet_52: 266085687
+      pipou_walk_sprite_sheet_6: -663341660
+      pipou_walk_sprite_sheet_7: 1117029411
+      pipou_walk_sprite_sheet_8: 1617393778
+      pipou_walk_sprite_sheet_9: 1503035181
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
