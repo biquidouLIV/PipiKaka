@@ -1,6 +1,7 @@
 // Game Manager Script
 
-using Unity.VisualScripting;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,7 +18,11 @@ public class GameManager : MonoBehaviour
     private int BuildPlayer;
     private int PlatformsPlaced;
     private int Round;
-
+    private List<GameObject> deadPlayers = new ();
+    private List<GameObject> scoreboard = new ();
+    private int numberDeadPlayers;
+    private Dictionary<GameObject, int> score = new ();
+    private GameObject winner;
 
     public static GameManager Instance;
 
@@ -39,6 +44,7 @@ public class GameManager : MonoBehaviour
         Build,
         Wait,
         Play,
+        Score,
         GameOver
     }
     
@@ -60,6 +66,13 @@ public class GameManager : MonoBehaviour
                     BuildPlayer = 0;
                     break;
                 case GameState.Build:
+                    
+                    GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                    foreach (GameObject player in players)
+                    {
+                        score.TryAdd(player.gameObject, 0);
+                    }
+                    
                     if (TotalPlayer == 0)
                     {
                         PlayerCount();
@@ -82,11 +95,16 @@ public class GameManager : MonoBehaviour
                     break;
                 
                 case GameState.Play:
-                    Debug.Log("phase Play");
+                    BuildPlayer = 0;
+                    //Debug.Log("phase Play");
                     TpPlayer();
-                    
+                    deadPlayers.Clear();
+                    scoreboard.Clear();
                     break;
-                
+                    
+                case GameState.Score:
+                    StartCoroutine(AfficherScore());
+                    break;
                 case GameState.GameOver:
                     gameOverMenu.SetActive(!gameOverMenu.activeSelf);
                     //Debug.Log("Phase de GameOver");
@@ -103,7 +121,7 @@ public class GameManager : MonoBehaviour
     {
         if (_currentState == GameState.Setup)
         {
-            if (Input.GetMouseButtonDown(2))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 PlayerCount();
                 CurrentState = GameState.Build;
@@ -118,29 +136,29 @@ public class GameManager : MonoBehaviour
     private void PlatformsCheck()
     {
         PlacableElement[] platforms = FindObjectsOfType<PlacableElement>();
-        int PlacedCount = 0;
+        int placedCount = 0;
 
         foreach (var plat in platforms)
         {
             if (plat.isPlaced)
             {
-                PlacedCount++;
+                placedCount++;
             }
         }
 
-        if (PlacedCount > PlatformsPlaced)
+        if (placedCount > PlatformsPlaced)
         {
-            PlatformsPlaced = PlacedCount;
+            PlatformsPlaced = placedCount;
             BuildPlayer++;
             CurrentState = GameState.Build;
         }
     }
-
-
+    
     private void PlayerCount()
     {
         TotalPlayer = GameObject.FindGameObjectsWithTag("Player").Length;
     }
+    
     private void TpPlayer()
     {
         int i = 0;
@@ -160,14 +178,64 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void PlayerDie(GameObject player)
+    {
+        deadPlayers.Add(player);
+        CheckEndGame();
+    }
+
+    public void PlayerArrive(GameObject player)
+    {
+        scoreboard.Add(player);
+        CheckEndGame();
+    }
+
+    private void CheckEndGame()
+    {
+        if (deadPlayers.Count + scoreboard.Count == TotalPlayer)
+        {
+            int i = 3;
+            foreach (GameObject player in scoreboard)
+            {
+                score[player] += i;
+                i--;
+                
+                if (score[player] >= 10)
+                {
+                    winner = player;
+                }
+            }
+            
+            foreach (GameObject elem in deadPlayers)
+            {
+                scoreboard.Add(elem);
+            }
+            
+            CurrentState = GameState.Score;
+        }
+    }
     
-
-
     private void SpawnRandomBlock()
     {
         for (int i = 0; i < 5; i++)
         {
             Instantiate(Platforms[UnityEngine.Random.Range(0, Platforms.Length)], new Vector3(-8 + 4 * i, -3, -1), Quaternion.identity);
+        }
+    }
+
+    private IEnumerator AfficherScore()
+    {
+        
+        yield return new WaitForSeconds(3f);
+        
+        if (winner != null)
+        {
+            CurrentState = GameState.GameOver;
+        }
+        else
+        {
+            CurrentState = GameState.Build;
         }
     }
 }

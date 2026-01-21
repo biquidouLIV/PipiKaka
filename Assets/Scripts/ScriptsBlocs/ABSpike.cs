@@ -26,9 +26,10 @@ public class ABSpike : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (colliderRythme == false)
+        if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(other.gameObject);
+            other.gameObject.transform.position = new Vector3(-50,-1.28f,0);
+            GameManager.Instance.PlayerDie(other.gameObject);
         }
     }
 }

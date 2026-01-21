@@ -7,14 +7,8 @@ public class DeathZone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.transform.position = new Vector3(-50,-1.5f,0);
-            GameManager.Instance.TotalPlayer--;
-        }
-
-        if (GameManager.Instance.TotalPlayer <= 0)
-        {
-            GameManager.Instance.CurrentState = GameManager.GameState.Setup; // Faudra les mettres sur la phase de build quand elle sera faite
-            //Debug.Log("Plus de joueur en vie");
+            other.gameObject.transform.position = new Vector3(-50,-1.28f,0);
+            GameManager.Instance.PlayerDie(other.gameObject);
         }
     }
 }

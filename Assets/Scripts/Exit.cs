@@ -6,9 +6,8 @@ public class Exit : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            GameManager.Instance.CurrentState = GameManager.GameState.GameOver;
+            other.gameObject.transform.position = new Vector3(-50,-1.28f,0);
+            GameManager.Instance.PlayerArrive(other.gameObject);
         }
-        
     }
-    
 }
