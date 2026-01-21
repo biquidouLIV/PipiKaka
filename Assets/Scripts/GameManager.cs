@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject scoreUI;
 
+    [SerializeField] private GameObject fondBlanc;
+
     
     [SerializeField] private GameObject[] Platforms;
     
@@ -79,6 +81,7 @@ public class GameManager : MonoBehaviour
                     BuildPlayer = 0;
                     break;
                 case GameState.Build:
+                    fondBlanc.SetActive(true);
                     
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                     foreach (GameObject player in players)
@@ -108,7 +111,7 @@ public class GameManager : MonoBehaviour
                     break;
                 
                 case GameState.Play:
-                    
+                    fondBlanc.SetActive(false);
                     BuildPlayer = 0;
                     TpPlayer();
                     
@@ -234,7 +237,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            Instantiate(Platforms[UnityEngine.Random.Range(0, Platforms.Length)], new Vector3(-8 + 4 * i, -3, -1), Quaternion.identity);
+            Instantiate(Platforms[UnityEngine.Random.Range(0, Platforms.Length)], new Vector3(-8 + 4 * i, -7.5f, -1), Quaternion.identity);
         }
     }
 
