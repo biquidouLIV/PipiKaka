@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool appuiEnCours = false;
     [SerializeField] private float tempsAppui = 0f;
     public LayerMask layersToHit;
-    
+    private bool grounded = true;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
     
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit) && ctx.started)
+        if (grounded == true && ctx.started)
         {
             appuiEnCours = true;
             tempsAppui = 0f;
@@ -74,8 +74,28 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 dir = new (moveInput.x, 0f, 0f);
-        rb.MovePosition(rb.position + speed * Time.deltaTime * dir);
+        if (grounded)
+        {
+            Vector3 dir = new (moveInput.x, 0f, 0f);
+            rb.MovePosition(rb.position + speed * Time.deltaTime * dir);
+        }
+        else
+        {
+            Vector3 dir = new (moveInput.x, 0f, 0f);
+            rb.MovePosition(rb.position + speed/2 * Time.deltaTime * dir);
+        }
+        if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit))
+        {
+            Debug.DrawRay(transform.position, Vector3.down * 1f, Color.green);
+            grounded = true;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, Vector3.down * 1f, Color.red);
+            grounded = false;
+        }
+        
+
         if (rotation.x != 0)
         {
             float angle = Mathf.Atan(rotation.y / rotation.x);
