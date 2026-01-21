@@ -4,11 +4,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     
     // GameState
+    [Header("UI")] 
+    [SerializeField] private Image[] playerScoreUI;
+
+    
     [SerializeField] private GameObject[] Platforms;
     
     [SerializeField] private GameObject cameraLobby;
@@ -23,6 +28,7 @@ public class GameManager : MonoBehaviour
     private int numberDeadPlayers;
     private Dictionary<GameObject, int> score = new ();
     private GameObject winner;
+    [SerializeField] private int winScore = 10;
 
     public static GameManager Instance;
 
@@ -201,7 +207,7 @@ public class GameManager : MonoBehaviour
                 score[player] += i;
                 i--;
                 
-                if (score[player] >= 10)
+                if (score[player] >= winScore)
                 {
                     winner = player;
                 }
@@ -226,10 +232,13 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator AfficherScore()
     {
+        int i = 0;
         foreach (var player in scoreboard)
         {
-            Debug.Log(score[player]);
+            playerScoreUI[i].fillAmount = (float)score[player]/winScore;
+            i++;
         }
+        
         
         
         yield return new WaitForSeconds(3f);
