@@ -5,6 +5,7 @@ using UnityEngine.InputSystem.Controls;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("stats")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private GameObject arrowParent;
     [SerializeField] private GameObject explosion;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tempsMax = 1f;
     [SerializeField] private bool appuiEnCours = false;
     [SerializeField] private float tempsAppui = 0f;
+    public LayerMask layersToHit;
     
     void Start()
     {
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
     
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (Physics.Raycast(transform.position, Vector3.down, 1f) && ctx.started)
+        if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit) && ctx.started)
         {
             appuiEnCours = true;
             tempsAppui = 0f;
