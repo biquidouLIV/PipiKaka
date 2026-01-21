@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tempsAppui = 0f;
     public LayerMask layersToHit;
     private bool grounded = true;
+    [SerializeField] private Animator player_animator;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -74,16 +75,26 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector3 dir = new Vector3(0f, 0f, 0f);
         if (grounded)
         {
-            Vector3 dir = new (moveInput.x, 0f, 0f);
+            dir = new (moveInput.x, 0f, 0f);
             rb.MovePosition(rb.position + speed * Time.deltaTime * dir);
         }
         else
         {
-            Vector3 dir = new (moveInput.x, 0f, 0f);
+            dir = new (moveInput.x, 0f, 0f);
             rb.MovePosition(rb.position + speed/2 * Time.deltaTime * dir);
         }
+        if (dir == new Vector3(0f, 0f, 0f))
+        {
+            player_animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            player_animator.SetBool("isWalking", true);
+        }
+
         if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit))
         {
             Debug.DrawRay(transform.position, Vector3.down * 1f, Color.green);

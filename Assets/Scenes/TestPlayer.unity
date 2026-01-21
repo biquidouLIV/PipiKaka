@@ -879,10 +879,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ab36bc85d111f439c518944b3494ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Platforms: []
   cameraLobby: {fileID: 230953938}
   mainCamera: {fileID: 2135284201}
   gameOverMenu: {fileID: 1406952575}
-  nbPlayerAlive: 0
+  TotalPlayer: 0
 --- !u!4 &329629549
 Transform:
   m_ObjectHideFlags: 0
@@ -1397,6 +1398,10 @@ MonoBehaviour:
   tempsMax: 1
   appuiEnCours: 0
   tempsAppui: 0
+  layersToHit:
+    serializedVersion: 2
+    m_Bits: 0
+  player_animator: {fileID: 628387752}
 --- !u!54 &628387751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1490,12 +1495,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1044823709, guid: f2b5e446bd52e904db91fc675195333b, type: 3}
+  m_Sprite: {fileID: 1975635974, guid: 9d829bc7d4a1c8242b20122b8f3135d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8, y: 1.16}
+  m_Size: {x: 0.75, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
