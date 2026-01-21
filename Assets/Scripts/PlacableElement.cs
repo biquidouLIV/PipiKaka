@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlacableElement : MonoBehaviour
 {
     private bool isSelected;
-    private bool isPlaced;
+    public bool isPlaced;
     private Camera mainCamera;
     private Vector3 offset;
     private float zDepth = 0f;
@@ -41,7 +41,6 @@ public class PlacableElement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Action();
-            Debug.Log("clic gauce");
         }
     }
 

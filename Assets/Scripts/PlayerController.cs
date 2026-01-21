@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 rotation = new Vector2(0,1);
     private Rigidbody rb;
     private float maxExplScale = 3.0f;
+    
     [Header("Player")]
     [SerializeField] private float forceMin = 5f;
     [SerializeField] private float forceMax = 12f;
