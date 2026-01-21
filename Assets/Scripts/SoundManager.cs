@@ -1,5 +1,6 @@
 // Sound Manager Script
 
+using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -111,6 +112,18 @@ public class SoundManager : MonoBehaviour
     //
     
     // Sound Functions
+    
+    private AudioSource FindEmptyAudioSource()
+    {
+        if (!soundSource.isPlaying)
+        {
+            return soundSource;
+        }
+        AudioSource newSource = gameObject.AddComponent<AudioSource>();
+        return newSource;
+    }
+    
+    //
 
     public void JumpSound(int playerNumber)
     {
@@ -122,17 +135,19 @@ public class SoundManager : MonoBehaviour
             2 => p3JumpSounds[soundNum],
             _ => p4JumpSounds[soundNum]
         };
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
     //
-
+    
     public void ChargeSound(int playerNumber)
     {
         var soundToPlay = chargeSounds[playerNumber];
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
     //
@@ -147,8 +162,9 @@ public class SoundManager : MonoBehaviour
             2 => p3DeathSounds[soundNum],
             _ => p4DeathSounds[soundNum]
         };
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
     //
@@ -157,8 +173,9 @@ public class SoundManager : MonoBehaviour
     {
         int soundNum = Random.Range(0, 2);
         var soundToPlay = startSounds[soundNum];
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
     //
@@ -166,8 +183,9 @@ public class SoundManager : MonoBehaviour
     public void ScoreSound()
     {
         var soundToPlay = scoreSound;
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
     //
@@ -176,8 +194,9 @@ public class SoundManager : MonoBehaviour
     {
         int soundNum = Random.Range(0, 3);
         var soundToPlay = placementSounds[soundNum];
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
     // 
@@ -187,8 +206,9 @@ public class SoundManager : MonoBehaviour
         AudioClip[] soundToPlay = { explosionSounds[0],explosionSounds[1]};
         foreach (var elem in soundToPlay)
         {
-            soundSource.clip = elem;
-            soundSource.Play();
+            AudioSource source = FindEmptyAudioSource();
+            source.clip = elem;
+            source.Play();
         }
     }
     
@@ -198,8 +218,9 @@ public class SoundManager : MonoBehaviour
     {
         int soundNum = Random.Range(0, 3);
         var soundToPlay = springSounds[soundNum];
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
     //
@@ -207,8 +228,9 @@ public class SoundManager : MonoBehaviour
     public void GlassBlock()
     {
         var soundToPlay = glassSound;
-        soundSource.clip = soundToPlay;
-        soundSource.Play();
+        AudioSource source = FindEmptyAudioSource();
+        source.clip = soundToPlay;
+        source.Play();
     }
     
 }
