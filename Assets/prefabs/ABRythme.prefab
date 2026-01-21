@@ -124,7 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e17924e6ba4264ba8cf9123a0132b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: 4581320998671646805}
+  sprite_on: {fileID: 4581320998671646805}
+  sprite_off: {fileID: 4993432521238259477}
   time: 2
 --- !u!114 &-6620740925040493900
 MonoBehaviour:
