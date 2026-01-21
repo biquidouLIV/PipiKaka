@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ABRythme : MonoBehaviour
 {
-    [SerializeField] private TMP_Text indicateur;
+    [SerializeField] private GameObject sprite;
+    [SerializeField] private float time = 2.0f;
     private BoxCollider colliderRythme;
     private void Start()
     {
@@ -13,14 +14,14 @@ public class ABRythme : MonoBehaviour
         StartCoroutine(Rythme());
     }
 
-    private IEnumerator Rythme() 
+    private IEnumerator Rythme() // c'est exactement la même chose que le scipt ABrythme
     {
-        indicateur.text = "A"; // change le texte qui apparait sur unity
-        colliderRythme.isTrigger = true; // on met le collider en trigger pour que le joueur passe au travers
-        yield return new WaitForSeconds(5); // on attend 5 sec
-        indicateur.text = "B"; // change le texte qui apparait sur unity
-        colliderRythme.isTrigger = false; // on remet le collider normal pour plus passer au travers
-        yield return new WaitForSeconds(5);// on attend 5 sec
+        sprite.SetActive(false);
+        colliderRythme.isTrigger = true;
+        yield return new WaitForSeconds(time);
+        sprite.SetActive(true);
+        colliderRythme.isTrigger = false;
+        yield return new WaitForSeconds(time);
         StartCoroutine(Rythme());
     }
 }
