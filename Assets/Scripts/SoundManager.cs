@@ -1,7 +1,7 @@
 // Sound Manager Script
 
-using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 //
 
@@ -13,16 +13,76 @@ public class SoundManager : MonoBehaviour
     private static SoundManager instance;
     
     // Game Variables
-
-    [Header("AudioSources")]
-    [SerializeField] private AudioSource[] audioSources;
-    [SerializeField] private AudioSource[] jumpSources;
-    [SerializeField] private AudioSource[] chargeSources;
-    [SerializeField] private AudioSource[] deathSources;
+    
+    [Header("Jump Sources")]
+    [SerializeField] private AudioClip[] p1JumpSounds;
+    [SerializeField] private AudioClip[] p2JumpSounds;
+    [SerializeField] private AudioClip[] p3JumpSounds;
+    [SerializeField] private AudioClip[] p4JumpSounds;
     [Space(10f)]
     
+    //
+    
+    [Header("Charge Sources")]
+    [SerializeField] private AudioClip[] chargeSounds;
+    [Space(10f)]
+    
+    //
+    
+    [Header("Death Sources")]
+    [SerializeField] private AudioClip[] p1DeathSounds;
+    [SerializeField] private AudioClip[] p2DeathSounds;
+    [SerializeField] private AudioClip[] p3DeathSounds;
+    [SerializeField] private AudioClip[] p4DeathSounds;
+    [Space(10f)]
+    
+    //
+    
+    [Header("Start Sources")]
+    [SerializeField] private AudioClip[] startSounds;
+    [Space(10f)]
+    
+    //
+    
+    [Header("Score Sources")]
+    [SerializeField] private AudioClip scoreSound;
+    [Space(10f)]
+    
+    //
+
+    [Header("Bloc Placement Sources")] 
+    [SerializeField] private AudioClip[] placementSounds;
+    [Space(10f)]
+    
+    //
+    
+    [Header("Spring Sources")] 
+    [SerializeField] private AudioClip[] springSounds;
+    [Space(10f)]
+    
+    //
+    
+    [Header("Explosion Sources")] 
+    [SerializeField] private AudioClip[] explosionSounds;
+    [Space(10f)]
+    
+    //
+    
+    [Header("Ice Sources")] 
+    [SerializeField] private AudioClip glassSound;
+    [Space(10f)]
+    
+    //
+    
     [Header("Music")]
-    [SerializeField] private AudioSource mainMusic;
+    [SerializeField] private AudioClip mainMusic;
+    [Space(10f)]
+    
+    //
+    
+    [Header("Audio Sources")]
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource soundSource;
     
     //
     
@@ -42,7 +102,10 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        //mainMusic.Play();
+        if (mainMusic == null) 
+            return;
+        musicSource.clip = mainMusic;
+        musicSource.Play();
     }
 
     //
@@ -51,70 +114,101 @@ public class SoundManager : MonoBehaviour
 
     public void JumpSound(int playerNumber)
     {
-        jumpSources[playerNumber].Play();
+        int soundNum = Random.Range(0, 3);
+        var soundToPlay = playerNumber switch
+        {
+            0 => p1JumpSounds[soundNum],
+            1 => p2JumpSounds[soundNum],
+            2 => p3JumpSounds[soundNum],
+            _ => p4JumpSounds[soundNum]
+        };
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
     //
 
     public void ChargeSound(int playerNumber)
     {
-        chargeSources[playerNumber].Play();
+        var soundToPlay = chargeSounds[playerNumber];
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
     //
     
     public void DeathSound(int playerNumber)
     {
-        deathSources[playerNumber].Play();
-    }
-    
-    //
-    
-    public void PushedSound()
-    {
-        audioSources[0].Play();
+        int soundNum = Random.Range(0, 3);
+        var soundToPlay = playerNumber switch
+        {
+            0 => p1DeathSounds[soundNum],
+            1 => p2DeathSounds[soundNum],
+            2 => p3DeathSounds[soundNum],
+            _ => p4DeathSounds[soundNum]
+        };
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
     //
 
     public void StartingSound()
     {
-        audioSources[0].Play();
+        int soundNum = Random.Range(0, 2);
+        var soundToPlay = startSounds[soundNum];
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
     //
 
     public void ScoreSound()
     {
-        audioSources[0].Play();
+        var soundToPlay = scoreSound;
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
     //
 
     public void PlacementSound()
     {
-        audioSources[0].Play();
+        int soundNum = Random.Range(0, 3);
+        var soundToPlay = placementSounds[soundNum];
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
     // 
 
     public void ExplosionSound()
     {
-        audioSources[0].Play();
+        AudioClip[] soundToPlay = { explosionSounds[0],explosionSounds[1]};
+        foreach (var elem in soundToPlay)
+        {
+            soundSource.clip = elem;
+            soundSource.Play();
+        }
     }
     
     //
 
     public void SpringSound()
     {
-        audioSources[0].Play();
+        int soundNum = Random.Range(0, 3);
+        var soundToPlay = springSounds[soundNum];
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
     //
 
     public void GlassBlock()
     {
-        audioSources[0].Play();
+        var soundToPlay = glassSound;
+        soundSource.clip = soundToPlay;
+        soundSource.Play();
     }
     
 }
