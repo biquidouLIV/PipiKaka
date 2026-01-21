@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool appuiEnCours = false;
     [SerializeField] private float tempsAppui = 0f;
     public LayerMask layersToHit;
-    
+    private bool grounded = true;
+    //[SerializeField] private Animator player_animator;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
     
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit) && ctx.started)
+        if (grounded == true && ctx.started)
         {
             appuiEnCours = true;
             tempsAppui = 0f;
@@ -74,8 +75,38 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 dir = new (moveInput.x, 0f, 0f);
-        rb.MovePosition(rb.position + speed * Time.deltaTime * dir);
+        Vector3 dir = new Vector3(0f, 0f, 0f);
+        if (grounded)
+        {
+            dir = new (moveInput.x, 0f, 0f);
+            rb.MovePosition(rb.position + speed * Time.deltaTime * dir);
+        }
+        else
+        {
+            dir = new (moveInput.x, 0f, 0f);
+            rb.MovePosition(rb.position + speed/2 * Time.deltaTime * dir);
+        }
+        if (dir == new Vector3(0f, 0f, 0f))
+        {
+            //player_animator.SetBool("isWalking", false);
+        }
+        else
+        {
+            //player_animator.SetBool("isWalking", true);
+        }
+
+        if (Physics.Raycast(transform.position, Vector3.down, 1f, layersToHit))
+        {
+            Debug.DrawRay(transform.position, Vector3.down * 1f, Color.green);
+            grounded = true;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, Vector3.down * 1f, Color.red);
+            grounded = false;
+        }
+        
+
         if (rotation.x != 0)
         {
             float angle = Mathf.Atan(rotation.y / rotation.x);
@@ -95,7 +126,6 @@ public class PlayerController : MonoBehaviour
             {
                 explosionScript.strength += 0.12f; //pour pas que la force soit trop grande
                 explosionScript.strength = Mathf.Clamp(explosionScript.strength, 0f, 15f);
-                Debug.Log(explosionScript.strength);
                 
                 float calculatedScale = MathF.Round(tempsAppui * 10) / 10;
                 float finalScale = Mathf.Clamp(calculatedScale, 0f, maxExplScale);
