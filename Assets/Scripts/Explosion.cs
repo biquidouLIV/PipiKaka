@@ -12,7 +12,6 @@ public class Explosion : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerList.Add(other.gameObject);
-            Debug.Log(playerList);
         }
     }
     private void OnTriggerExit(Collider other)
@@ -20,7 +19,6 @@ public class Explosion : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             playerList.Remove(other.gameObject);
-            Debug.Log(playerList);
         }
     }
 
@@ -28,10 +26,8 @@ public class Explosion : MonoBehaviour
     {
         foreach (GameObject PLAYER in playerList)
         {
-            
             Vector3 direction = (PLAYER.transform.position - transform.position).normalized;
             PLAYER.GetComponent<Rigidbody>().AddForce(direction * strength, ForceMode.Impulse);
-            Debug.Log(direction*strength);
         }
     }
     // Update is called once per frame

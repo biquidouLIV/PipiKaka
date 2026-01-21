@@ -95,7 +95,6 @@ public class PlayerController : MonoBehaviour
             {
                 explosionScript.strength += 0.12f; //pour pas que la force soit trop grande
                 explosionScript.strength = Mathf.Clamp(explosionScript.strength, 0f, 15f);
-                Debug.Log(explosionScript.strength);
                 
                 float calculatedScale = MathF.Round(tempsAppui * 10) / 10;
                 float finalScale = Mathf.Clamp(calculatedScale, 0f, maxExplScale);
