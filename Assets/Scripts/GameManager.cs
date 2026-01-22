@@ -250,11 +250,9 @@ public class GameManager : MonoBehaviour
     {
         SoundManager.instance.ScoreSound();
         int i = 0;
-        foreach (var player in scoreboard)
+        foreach (var elem in numPlayer)
         {
-            playerScoreUI[i].fillAmount = (float)score[player]/winScore;
-            player.transform.position = new Vector3(-15f, 8 - 3.6f * i, 0);
-            player.GetComponent<Rigidbody>().constraints |= RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY;
+            playerScoreUI[elem.Value].fillAmount = (float)score[elem.Key]/winScore;
             i++;
         }
 
@@ -268,11 +266,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         
         scoreUI.SetActive(false);
-        foreach (var player in scoreboard)
-        {
-            player.transform.position = new Vector3(-50,-1.28f,0);
-            player.GetComponent<Rigidbody>().constraints &= ~(RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY);
-        }
         
         if (winner != null)
         {
