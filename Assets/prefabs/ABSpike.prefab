@@ -311,6 +311,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31f1c628a50edc48aaf35e2cdf12849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite_on: {fileID: 240560602832276389}
+  sprite_off: {fileID: 1704713493570827873}
   sprite: {fileID: 240560602832276389}
   time: 2
 --- !u!114 &4219482328564849863

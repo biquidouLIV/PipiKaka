@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BlocksTest.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/kaka.unity
+    guid: a16f2524aa204af41bbfea588e44cae7
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4a77e02de9c1391408e655362a0a4ae6, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

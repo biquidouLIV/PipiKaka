@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     
     [SerializeField] private GameObject cameraLobby;
     [SerializeField] private GameObject mainCamera;
+    [SerializeField] private GameObject LobbyUI;
     public GameObject gameOverMenu;
     public int TotalPlayer;
     private int BuildPlayer;
@@ -76,6 +77,7 @@ public class GameManager : MonoBehaviour
             switch (_currentState)
             {
                 case GameState.Setup:
+                    
                     cameraLobby.SetActive(true);
                     mainCamera.SetActive(false);
                     PlayerCount();
@@ -138,20 +140,20 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (_currentState == GameState.Setup)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                PlayerCount();
-                CurrentState = GameState.Build;
-            }
-        }
+
         if (CurrentState == GameState.Wait)
         {
             PlatformsCheck();
         }
     }
 
+    public void StartGame()
+    {
+        PlayerCount();
+        CurrentState = GameState.Build;
+        LobbyUI.SetActive(false);
+    }
+    
     private void PlatformsCheck()
     {
         PlacableElement[] platforms = FindObjectsOfType<PlacableElement>();
