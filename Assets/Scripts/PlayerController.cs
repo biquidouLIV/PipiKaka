@@ -51,20 +51,17 @@ public class PlayerController : MonoBehaviour
             tempsAppui = 0f;
             SoundManager.instance.ChargeSound(GameManager.Instance.numPlayer[gameObject]);
         }
-        else if (ctx.canceled)
+        else if (ctx.canceled && appuiEnCours)
         {
             SoundManager.instance.JumpSound(GameManager.Instance.numPlayer[gameObject]);
             player_animator.SetTrigger("Jump");
             explosionScript.Explode();
-            if (appuiEnCours)
-            {
-                tempsAppui = Mathf.Clamp(tempsAppui, 0f, tempsMax);
-                float multiplicateur = tempsAppui / tempsMax;
-                rb.AddForce(new (rotation.x * 500 * multiplicateur, rotation.y * 500 * multiplicateur, 0f));
-            }
+            tempsAppui = Mathf.Clamp(tempsAppui, 0f, tempsMax);
+            float multiplicateur = tempsAppui / tempsMax;
+            rb.AddForce(new (rotation.x * 500 * multiplicateur, rotation.y * 500 * multiplicateur, 0f));
             appuiEnCours = false;
-            tempsAppui = 0f;
         }
+        tempsAppui = 0f;
     }
     
     public void OnMove(InputAction.CallbackContext context)
