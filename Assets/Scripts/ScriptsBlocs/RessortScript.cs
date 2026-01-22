@@ -11,5 +11,6 @@ public class RessortScript : MonoBehaviour
         Vector3 b = other.transform.position;
         Vector3 direction = (b - a).normalized;
         rb.AddForce(direction * Force);
+        SoundManager.instance.SpringSound();
     }
 }

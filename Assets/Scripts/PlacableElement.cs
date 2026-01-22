@@ -121,5 +121,7 @@ public class PlacableElement : MonoBehaviour
         isPlaced = true;
         gameObject.tag = "Platform";
         transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
+        
+        SoundManager.instance.PlacementSound();
     }
 }

@@ -16,7 +16,7 @@ public class IceBlockScript : MonoBehaviour
         transform.position = new Vector3(1000, 1000, 1000);
         yield return new WaitForSeconds(5);
         transform.position = posInit;
-
+        SoundManager.instance.GlassBlock();
     }
     
 }

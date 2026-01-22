@@ -46,11 +46,14 @@ public class PlayerController : MonoBehaviour
         if (grounded == true && ctx.started)
         {
             player_animator.SetTrigger("Load");
+            player_animator.ResetTrigger("Jump");
             appuiEnCours = true;
             tempsAppui = 0f;
+            SoundManager.instance.ChargeSound(GameManager.Instance.numPlayer[gameObject]);
         }
         else if (ctx.canceled)
         {
+            SoundManager.instance.JumpSound(GameManager.Instance.numPlayer[gameObject]);
             player_animator.SetTrigger("Jump");
             explosionScript.Explode();
             if (appuiEnCours)

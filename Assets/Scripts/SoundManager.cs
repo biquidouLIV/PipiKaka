@@ -11,7 +11,7 @@ public class SoundManager : MonoBehaviour
     
     // Singleton 
 
-    private static SoundManager instance;
+    public static SoundManager instance;
     
     // Game Variables
     
