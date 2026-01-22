@@ -1,37 +1,47 @@
-using System;
+// Explosion Script
+
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
+
 public class Explosion : MonoBehaviour
 {
-    [SerializeField] public float strength =0f;
-    List<GameObject> playerList = new List<GameObject>();
-    [SerializeField] private Animator explosion_animator;
+    
+    [Header("Explosion Settings")]
+    [SerializeField] public float strength = 0f;
+    [FormerlySerializedAs("explosion_animator")] [SerializeField] private Animator explosionAnimator;
+    
+    private List<GameObject> _playerList = new();
     
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerList.Add(other.gameObject);
+            _playerList.Add(other.gameObject);
         }
     }
+    
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerList.Remove(other.gameObject);
+            _playerList.Remove(other.gameObject);
         }
     }
 
     public void Explode()
     {
-        foreach (GameObject PLAYER in playerList)
+        foreach (GameObject player in _playerList)
         {
-            Vector3 direction = (PLAYER.transform.position - transform.position).normalized;
-            PLAYER.GetComponent<Rigidbody>().AddForce(direction * strength, ForceMode.Impulse);
+            Vector3 direction = (player.transform.position - transform.position).normalized;
+            player.GetComponent<Rigidbody>().constraints &= ~(RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionY);
+            player.GetComponent<Rigidbody>().AddForce(direction * strength, ForceMode.Impulse);
         }
         
-        explosion_animator.SetTrigger("Explode");
+        explosionAnimator.SetTrigger("Explode");
         SoundManager.instance.ExplosionSound();
     }
+    
 }
+
+// END //
