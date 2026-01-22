@@ -32,5 +32,6 @@ public class Explosion : MonoBehaviour
         }
         
         explosion_animator.SetTrigger("Explode");
+        SoundManager.instance.ExplosionSound();
     }
 }

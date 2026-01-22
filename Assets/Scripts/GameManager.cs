@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private List<GameObject> scoreboard = new ();
     private int numberDeadPlayers;
     private Dictionary<GameObject, int> score = new ();
+    public Dictionary<GameObject, int> numPlayer = new ();
     private GameObject winner;
     [SerializeField] private int winScore = 10;
     [Header("Settings Multijoueur")]
@@ -111,6 +112,7 @@ public class GameManager : MonoBehaviour
                     break;
                 
                 case GameState.Play:
+                    SoundManager.instance.StartingSound();
                     fondBlanc.SetActive(false);
                     BuildPlayer = 0;
                     TpPlayer();
@@ -199,6 +201,7 @@ public class GameManager : MonoBehaviour
     public void PlayerDie(GameObject player)
     {
         deadPlayers.Add(player);
+        SoundManager.instance.DeathSound(numPlayer[player]);
         CheckEndGame();
     }
 
@@ -243,6 +246,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator AfficherScore()
     {
+        SoundManager.instance.ScoreSound();
         int i = 0;
         foreach (var player in scoreboard)
         {
@@ -284,6 +288,6 @@ public class GameManager : MonoBehaviour
         Color assignedColor = playerColors[index % playerColors.Length];
         
         input.gameObject.GetComponent<PlayerController>().SetColor(assignedColor); //modifie le script du prefab playercontroller comme ca ca change la couleur t'as capté
-        
+        numPlayer.Add(input.gameObject, numPlayer.Count);
     }
 }
