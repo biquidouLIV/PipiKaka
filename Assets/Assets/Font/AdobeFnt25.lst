@@ -1,0 +1,47 @@
+%!Adobe-FontList 1.25
+%Locale:0x40c
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\UnityProjects\PipiKaka\Assets\Assets\Font\PixelifySans-Bold Bitmap.asset
+FileModTime:1769043532
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\UnityProjects\PipiKaka\Assets\Assets\Font\PixelifySans-Bold Bitmap.asset.meta
+FileModTime:1769040581
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:PixelifySans-Bold
+FamilyName:Pixelify Sans
+StyleName:Bold
+FullName:Pixelify Sans Bold
+MenuName:Pixelify Sans
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\UnityProjects\PipiKaka\Assets\Assets\Font\PixelifySans-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+hasCOLR:no
+VariableFontType:NonVariableFont
+FileLength:50872
+FileModTime:1769040466
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Win,1,Pixelify Sans
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Invalid
+OutlineFileName:C:\UnityProjects\PipiKaka\Assets\Assets\Font\PixelifySans-Bold.ttf.meta
+FileModTime:1769040623
+%EndFont
+
