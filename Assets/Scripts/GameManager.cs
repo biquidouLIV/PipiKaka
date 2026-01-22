@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject cameraLobby;
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject LobbyUI;
+    [SerializeField] private GameObject pauseUI;
     public GameObject gameOverMenu;
     public int TotalPlayer;
     private int BuildPlayer;
@@ -38,6 +39,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int winScore = 10;
     [Header("Settings Multijoueur")]
     [SerializeField] private Color[] playerColors;
+
+    private bool Paused;
     
 
     public static GameManager Instance;
@@ -140,7 +143,12 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pause();
+        }
+        
+        
         if (CurrentState == GameState.Wait)
         {
             PlatformsCheck();
@@ -303,5 +311,21 @@ public class GameManager : MonoBehaviour
         
         input.gameObject.GetComponent<PlayerController>().SetColor(assignedColor); //modifie le script du prefab playercontroller comme ca ca change la couleur t'as capté
         numPlayer.Add(input.gameObject, numPlayer.Count);
+    }
+
+    public void Pause()
+    {
+        Paused = !Paused;
+
+        if (Paused)
+        {
+            Time.timeScale = 0;
+            pauseUI.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseUI.SetActive(false);
+        }
     }
 }
