@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator player_animator;
     [Header("Apparence")]
     [SerializeField] private SpriteRenderer spriteRenderer;
+    public bool alive = true;
     
     void Start()
     {
@@ -43,7 +44,7 @@ public class PlayerController : MonoBehaviour
     
     public void Jump(InputAction.CallbackContext ctx)
     {
-        if (grounded == true && ctx.started)
+        if (grounded == true && ctx.started && alive)
         {
             player_animator.SetTrigger("Load");
             player_animator.ResetTrigger("Jump");
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
             tempsAppui = 0f;
             SoundManager.instance.ChargeSound(GameManager.Instance.numPlayer[gameObject]);
         }
-        else if (ctx.canceled && appuiEnCours)
+        else if (ctx.canceled && appuiEnCours  && alive)
         {
             SoundManager.instance.JumpSound(GameManager.Instance.numPlayer[gameObject]);
             player_animator.SetTrigger("Jump");

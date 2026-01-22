@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
             switch (_currentState)
             {
                 case GameState.Setup:
-                    
+                    PlayerAlive();
                     cameraLobby.SetActive(true);
                     mainCamera.SetActive(false);
                     PlayerCount();
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
                     break;
                 case GameState.Build:
                     fondBlanc.SetActive(true);
-                    
+                    PlayerDead();
                     GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                     foreach (GameObject player in players)
                     {
@@ -185,8 +185,25 @@ public class GameManager : MonoBehaviour
         int i = 0;
         foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
         {
+            player.GetComponent<PlayerController>().alive = true;
             player.gameObject.transform.position = new Vector3(-16, 4 + i, 0);
             i++;
+        }
+    }
+
+    private void PlayerDead()
+    {
+        foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            player.GetComponent<PlayerController>().alive = false;
+        }
+    }
+    
+    private void PlayerAlive()
+    {
+        foreach (var player in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            player.GetComponent<PlayerController>().alive = false;
         }
     }
     
@@ -202,6 +219,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerDie(GameObject player)
     {
+        player.GetComponent<PlayerController>().alive = false;
         deadPlayers.Add(player);
         SoundManager.instance.DeathSound(numPlayer[player]);
         CheckEndGame();
@@ -209,6 +227,7 @@ public class GameManager : MonoBehaviour
 
     public void PlayerArrive(GameObject player)
     {
+        player.GetComponent<PlayerController>().alive = false;
         scoreboard.Add(player);
         CheckEndGame();
     }

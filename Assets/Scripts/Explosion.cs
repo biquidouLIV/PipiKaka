@@ -12,6 +12,7 @@ public class Explosion : MonoBehaviour
     [FormerlySerializedAs("explosion_animator")] [SerializeField] private Animator explosionAnimator;
     
     private List<GameObject> _playerList = new();
+    [SerializeField] private GameObject player;
     
     private void OnTriggerEnter(Collider other)
     {
