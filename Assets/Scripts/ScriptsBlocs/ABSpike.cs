@@ -5,6 +5,8 @@ using TMPro;
 
 public class ABSpike : MonoBehaviour
 {
+    [SerializeField] private GameObject sprite_on;
+    [SerializeField] private GameObject sprite_off;
     [SerializeField] GameObject sprite;
     [SerializeField] private float time = 2.0f;
     private BoxCollider colliderRythme;
@@ -16,11 +18,16 @@ public class ABSpike : MonoBehaviour
 
     private IEnumerator Rythme() // c'est exactement la même chose que le scipt ABrythme
     {
-        sprite.SetActive(false);
+        sprite_on.SetActive(false);
+        sprite_off.SetActive(true);
         colliderRythme.isTrigger = true;
+        
         yield return new WaitForSeconds(time);
-        sprite.SetActive(true);
+        
+        sprite_on.SetActive(true);
+        sprite_off.SetActive(false);
         colliderRythme.isTrigger = false;
+        
         yield return new WaitForSeconds(time);
         StartCoroutine(Rythme());
     }
